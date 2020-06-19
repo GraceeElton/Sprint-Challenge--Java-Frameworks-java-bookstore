@@ -95,4 +95,9 @@ public class Author extends Auditable
     {
         this.book = book;
     }
+
+    public List<Wrote> getWrote()
+    {
+        return book;
+    }
 }

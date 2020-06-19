@@ -12,7 +12,7 @@ public class Section
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long  asectionid;
+    private long  sectionid;
 
     @Column(nullable = false, unique = true)
     private String sectioname;
@@ -34,14 +34,14 @@ public class Section
 
     }
 
-    public long getAsectionid()
+    public long getsectionid()
     {
-        return asectionid;
+        return sectionid;
     }
 
-    public void setAsectionid(long asectionid)
+    public void setsectionid(long asectionid)
     {
-        this.asectionid = asectionid;
+        this.sectionid = asectionid;
     }
 
     public String getSectioname()

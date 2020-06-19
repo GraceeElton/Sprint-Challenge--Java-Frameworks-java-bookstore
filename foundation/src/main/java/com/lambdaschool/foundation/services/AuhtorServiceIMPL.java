@@ -1,6 +1,7 @@
 package com.lambdaschool.foundation.services;
 
-import com.lambdaschool.foundation.models.Author;
+import com.lambdaschool.foundation.exceptions.ResourceNotFoundException;
+import com.lambdaschool.foundation.models.*;
 import com.lambdaschool.foundation.repository.AuthorRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +30,19 @@ public class AuhtorServiceIMPL implements AuthorService
     @Override
     public Author save(Author author)
     {
-        return null;
+
+        Author newAuthor = new Author();
+
+        newAuthor.setFirstname(author.getFirstname());
+        newAuthor.setLastname(author.getLastname());
+
+        for (Wrote w : author.getWrote())
+        {
+            newAuthor.getWrote()
+                    .add(new Wrote(newAuthor,
+                            w.getBook()));
+        }
+
+        return authorRepo.save(newAuthor);
     }
 }

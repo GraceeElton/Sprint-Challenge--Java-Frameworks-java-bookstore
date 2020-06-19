@@ -44,7 +44,6 @@ public class Book
         this.isbn = isbn;
         this.copy = copy;
         this.section = section;
-//        this.booklist = booklist;
     }
 
     public long getBookid()
@@ -97,15 +96,6 @@ public class Book
         this.section = section;
     }
 
-//    public List<Book> getBooklist()
-//    {
-//        return booklist;
-//    }
-//
-//    public void setBooklist(List<Book> booklist)
-//    {
-//        this.booklist = booklist;
-//    }
 
     public void setWrotes(List<Wrote> authors)
     {
