@@ -49,12 +49,14 @@ public class BookServiceImplTest
     {
     }
 
+    //working
     @Test
     public void findAll()
     {
         assertEquals(5,bookService.findAll().size());
     }
 
+    // working
     @Test
     public void findBookById()
     {
@@ -62,11 +64,16 @@ public class BookServiceImplTest
         assertEquals("Flatterland", bookService.findBookById(26).getTitle());
     }
 
+    // working
+
     @Test(expected = ResourceNotFoundException.class)
     public void notFindBookById()
     {
+        assertEquals("Flatterland", bookService.findBookById(1000).getTitle());
+
     }
 
+    // working
     @Test
     public void delete()
     {
